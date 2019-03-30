@@ -24,6 +24,19 @@ console.log(ran4);
 var total = 0;
 var wins = 0;
 var losses = 0;
-console.log(total)
-console.log(wins)
-console.log(losses)
+console.log(total);
+console.log(wins);
+console.log(losses);
+
+//append the the variables wins and losses to the #numberWins and #numberLosses
+
+$("#numberWins").text(wins);
+$("#numberLosses").text(wins);
+$("#finalTotal").text(total)
+
+//set up function to add ran1-4 to the total
+
+$('#afghan').on ('click', function(){
+    total = total + ran1;
+    console.log("the afghan hounds are here: " + ran1)
+})
