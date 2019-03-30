@@ -3,17 +3,17 @@
   <head>
     <link rel="stylesheet" href="./assets/css/Reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Dog Show Entry Game</title>
+    <title>Dog Show Game</title>
   </head>
 
   <body>
-    <h1>Dog Show Entry Game</h1>
+    <h1>Dog Show Game</h1>
 
     <p>
       You will be given a random at the start of the game. This is the number of
       dogs that can participate in the dog show. <br />
       There are only four breeds showing: Shelties, Saluki's, Afghan Hounds, and
-      Chinese Crested's. Each photo is of that breed and has been assigned a
+      Chinese Crested. Each photo is of that breed and has been assigned a
       random number. By clicking on the photo your the number of dogs entered
       will add up.<br />
       To win you match the number of dogs entered to that of the max number of
@@ -22,10 +22,57 @@
       Each time when the game starts, the game all the values will change.
     </p>
 
-    <div class="entries"></div>
+    <div class="entry">
+      <h2>
+        Number of available entries:
+        <span id="entryNumber"></span>
+      </h2>
+    </div>
     <div class="results">
-      <div class="wins"></div>
+      <div class="winsAndLosses">
+        <h2>
+          <span id="winLose"></span>
+          <br />
+          Wins:
+          <span id="numberWins"></span>
+          <br />
+          Losses:
+          <span id="numberLosses"></span>
+        </h2>
+      </div>
       <div class="lose"></div>
+    </div>
+    <div class="dogs">
+      <img
+        src="assets/images/Afghan.jpg"
+        class="dogImage"
+        id="afghan"
+        alt="dogOne"
+      />
+      <img
+        src="assets/images/Saluki-2.jpg"
+        class="dogImage"
+        id="saluki"
+        alt="dogTwo"
+      />
+      <img
+        src="assets/images/Sheltie.jpg"
+        class="dogImage"
+        id="sheltie"
+        alt="dogThree"
+      />
+      <img
+        src="assets/images/Chinese-Crested.jpg"
+        class="dogImage"
+        id="crested"
+        alt="dogFour"
+      />
+    </div>
+    <div class="userTotal">
+      <h2>
+        Your total score is:
+        <span id="finalTotal"></span>
+      </h2>
     </div>
   </body>
   <script
