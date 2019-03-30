@@ -40,4 +40,19 @@ $('#afghan').on ('click', function(){
     total = total + ran1;
     console.log("the afghan hounds are here: " + ran1)
     $('#finalTotal').text(total);
-})
+    })
+$('#saluki').on ('click', function(){
+    total = total + ran2;
+    console.log("the saluki's are here: " + ran2)
+    $('#finalTotal').text(total);
+    })
+$('#sheltie').on ('click', function(){
+    total = total + ran3;
+    console.log("the shelties are here: " + ran3)
+    $('#finalTotal').text(total);
+    })
+$('#crested').on ('click', function(){
+    total = total + ran4;
+    console.log("the cresteds are here: " + ran4)
+    $('#finalTotal').text(total);
+    })
