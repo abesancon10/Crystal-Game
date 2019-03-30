@@ -39,4 +39,5 @@ $("#finalTotal").text(total)
 $('#afghan').on ('click', function(){
     total = total + ran1;
     console.log("the afghan hounds are here: " + ran1)
+    $('#finalTotal').text(total);
 })
