@@ -30,6 +30,7 @@ $(document).ready(function() {
   $("#numberLosses").text(losses);
   $("#finalTotal").text(total);
   //create reset function: needs reset for entry, ran1-4, and total
+  //reset the .text for #entryNumber and #finalTotal
   function reset() {
     entry = Math.floor(Math.random() * 43 + 25);
     $("#entryNumber").text(entry);
@@ -37,7 +38,7 @@ $(document).ready(function() {
     ran2 = Math.floor(Math.random() * 13 + 1);
     ran3 = Math.floor(Math.random() * 13 + 1);
     ran4 = Math.floor(Math.random() * 13 + 1);
-    total = 0;
+    $("#finalTotal").text((total = 0));
   }
   //create the function for if the player wins
   function hooray() {
