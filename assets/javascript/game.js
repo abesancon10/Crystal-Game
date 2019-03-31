@@ -58,16 +58,31 @@ $(document).ready(function() {
     total = total + ran2;
     console.log("the saluki's are here: " + ran2);
     $("#finalTotal").text(total);
+    if (total == entry) {
+      yes();
+    } else if (total > entry) {
+      oops();
+    }
   });
   $("#sheltie").on("click", function() {
     total = total + ran3;
     console.log("the shelties are here: " + ran3);
     $("#finalTotal").text(total);
+    if (total == entry) {
+      yes();
+    } else if (total > entry) {
+      oops();
+    }
   });
   $("#crested").on("click", function() {
     total = total + ran4;
     console.log("the cresteds are here: " + ran4);
     $("#finalTotal").text(total);
+    if (total == entry) {
+      yes();
+    } else if (total > entry) {
+      oops();
+    }
   });
 });
 
