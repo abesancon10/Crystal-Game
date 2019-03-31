@@ -26,8 +26,6 @@ $(document).ready(function() {
 
   //append the the variables wins and losses to the #numberWins and #numberLosses
   $("#entryNumber").text(entry);
-  $("#numberWins").text(wins);
-  $("#numberLosses").text(losses);
   $("#finalTotal").text(total);
   //create reset function: needs reset for entry, ran1-4, and total
   //reset the .text for #entryNumber and #finalTotal
