@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var entry = Math.floor(Math.random() * 43 + 25);
-  $("#entryNumber").text(entry);
 
   //entry is randomly generated
   //entry should remain between 25 and 68
@@ -26,13 +25,14 @@ $(document).ready(function() {
   var losses = 0;
 
   //append the the variables wins and losses to the #numberWins and #numberLosses
-
+  $("#entryNumber").text(entry);
   $("#numberWins").text(wins);
-  $("#numberLosses").text(wins);
+  $("#numberLosses").text(losses);
   $("#finalTotal").text(total);
   //create reset function: needs reset for entry, ran1-4, and total
   function reset() {
     entry = Math.floor(Math.random() * 43 + 25);
+    $("#entryNumber").text(entry);
     ran1 = Math.floor(Math.random() * 13 + 1);
     ran2 = Math.floor(Math.random() * 13 + 1);
     ran3 = Math.floor(Math.random() * 13 + 1);
@@ -43,11 +43,13 @@ $(document).ready(function() {
   function hooray() {
     wins++;
     $("#numberWins").text(wins);
+    reset();
   }
   //create the function for if the player loses
   function ohno() {
     losses++;
     $("#numberLosses").text(losses);
+    reset();
   }
   //'hooray' and 'ohno' functions add 1 to 'wins' and 'losses', and appends it to the DOM
   //set up function to add ran1-4 to the total
