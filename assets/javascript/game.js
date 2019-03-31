@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var entry = Math.floor(Math.random() * 43 + 25);
-  $("#entryNumber").text(entry);
 
   //entry is randomly generated
   //entry should remain between 25 and 68
@@ -24,44 +23,56 @@ $(document).ready(function() {
   var total = 0;
   var wins = 0;
   var losses = 0;
-  console.log(total);
-  console.log(wins);
-  console.log(losses);
 
   //append the the variables wins and losses to the #numberWins and #numberLosses
-
+  $("#entryNumber").text(entry);
   $("#numberWins").text(wins);
-  $("#numberLosses").text(wins);
+  $("#numberLosses").text(losses);
   $("#finalTotal").text(total);
-
-  function yes() {
+  //create reset function: needs reset for entry, ran1-4, and total
+  //reset the .text for #entryNumber and #finalTotal
+  function reset() {
+    entry = Math.floor(Math.random() * 43 + 25);
+    $("#entryNumber").text(entry);
+    ran1 = Math.floor(Math.random() * 13 + 1);
+    ran2 = Math.floor(Math.random() * 13 + 1);
+    ran3 = Math.floor(Math.random() * 13 + 1);
+    ran4 = Math.floor(Math.random() * 13 + 1);
+    $("#finalTotal").text((total = 0));
+  }
+  //create the function for if the player wins
+  function hooray() {
     wins++;
     $("#numberWins").text(wins);
+    reset();
   }
-  function oops() {
+  //create the function for if the player loses
+  function ohno() {
     losses++;
     $("#numberLosses").text(losses);
+    reset();
   }
+  //'hooray' and 'ohno' functions add 1 to 'wins' and 'losses', and appends it to the DOM
   //set up function to add ran1-4 to the total
-  //total is added onto the DOM under #finalTotal
+  //set up the conditions for win and loss
   $("#afghan").on("click", function() {
     total = total + ran1;
     console.log("the afghan hounds are here: " + ran1);
     $("#finalTotal").text(total);
     if (total == entry) {
-      yes();
+      hooray();
     } else if (total > entry) {
-      oops();
+      ohno();
     }
   });
   $("#saluki").on("click", function() {
     total = total + ran2;
-    console.log("the saluki's are here: " + ran2);
+    console.log("the salukis are here: " + ran2);
     $("#finalTotal").text(total);
     if (total == entry) {
-      yes();
+      hooray();
     } else if (total > entry) {
-      oops();
+      ohno();
     }
   });
   $("#sheltie").on("click", function() {
@@ -69,9 +80,9 @@ $(document).ready(function() {
     console.log("the shelties are here: " + ran3);
     $("#finalTotal").text(total);
     if (total == entry) {
-      yes();
+      hooray();
     } else if (total > entry) {
-      oops();
+      ohno();
     }
   });
   $("#crested").on("click", function() {
@@ -79,12 +90,12 @@ $(document).ready(function() {
     console.log("the cresteds are here: " + ran4);
     $("#finalTotal").text(total);
     if (total == entry) {
-      yes();
+      hooray();
     } else if (total > entry) {
-      oops();
+      ohno();
     }
   });
 });
-
-//set up the conditions for win
-//moved the win lose functions ahead of the picture functions
+//total is added onto the DOM under #finalTotal
+//each function for the picture div id's add to the #finalTotal when clicked
+//picture div id's have the functions for the if the player wins and loses ('hooray' and 'ohno' functions)
