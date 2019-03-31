@@ -8,33 +8,50 @@
 
   <body>
     <h1>Dog Show Game</h1>
-
+    <br />
     <p>
-      You will be given a random number at the start of the game. This number of
-      dogs that can participate in the dog show. <br />
-      There are only four breeds showing: Shelties, Saluki's, Afghan Hounds, and
-      Chinese Crested. Each photo is of that breed and has been assigned a
-      random number. By clicking on the photo your the number of dogs entered
-      will add up.<br />
-      To win you match the number of dogs entered to that of the max number of
-      entries. If you enter more dogs into the show than permitted you lose.
-      <br />
-      Each time when the game starts, the game all the values will change.
+      <ln
+        >You will be given a random number at the start of the game. This number
+        is the number of dogs that can be entered into the dog show.</ln
+      ><br /><br />
+      <ln
+        >Below are pictures of the four types of dogs that are showing: Shetland
+        Sheepdogs (Shelties), Salukis, Afghan Hounds, and Chinese Cresteds.</ln
+      ><br /><br />
+      <ln
+        >Each dog is assigned a random number that you cannot see. By clicking
+        on the photo your the number of dogs entered will add up.</ln
+      ><br /><br />
+      <ln
+        >To win the round you must match the number of dogs entered to that of
+        the max number of available entries.</ln
+      ><br /><br />
+      <ln
+        >If you enter more dogs into the show than permitted you lose the
+        round.</ln
+      >
+      <br /><br />
+      <ln
+        >At the end of each round the Available Entries, Dogs Entered, and the
+        dogs values will reset.</ln
+      ><br /><br />
+      <ln>GOOD LUCK!</ln>
     </p>
-
+    <br />
     <div class="entry">
       <h2>
-        Number of available entries:
+        Number of Available Entries:
         <span id="entryNumber"></span>
       </h2>
     </div>
     <div class="results">
       <div class="winsAndLosses">
+        <br />
         <h2>
-          <span id="winLose"></span>
-          <br />
+        <!--- <span id="winLose"></span> This where the splash text will go-->
           Wins:
           <span id="numberWins"></span>
+          <br />
           <br />
           Losses:
           <span id="numberLosses"></span>
@@ -42,6 +59,7 @@
       </div>
       <div class="lose"></div>
     </div>
+    <br />
     <div class="dogs">
       <img
         src="assets/images/Afghan.jpg"
@@ -69,8 +87,9 @@
       />
     </div>
     <div class="userTotal">
+      <br />
       <h2>
-        Your total score is:
+        Total Dogs Entered:
         <span id="finalTotal"></span>
       </h2>
     </div>

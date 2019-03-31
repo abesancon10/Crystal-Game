@@ -26,8 +26,6 @@ $(document).ready(function() {
 
   //append the the variables wins and losses to the #numberWins and #numberLosses
   $("#entryNumber").text(entry);
-  $("#numberWins").text(wins);
-  $("#numberLosses").text(losses);
   $("#finalTotal").text(total);
   //create reset function: needs reset for entry, ran1-4, and total
   //reset the .text for #entryNumber and #finalTotal
@@ -39,17 +37,20 @@ $(document).ready(function() {
     ran3 = Math.floor(Math.random() * 13 + 1);
     ran4 = Math.floor(Math.random() * 13 + 1);
     $("#finalTotal").text((total = 0));
+    $("#winLose").text(" ");
   }
   //create the function for if the player wins
   function hooray() {
     wins++;
     $("#numberWins").text(wins);
+    //$("#winLose").text("YOU WIN!"); SPLASH text for when player wins: need to set time interval
     reset();
   }
   //create the function for if the player loses
   function ohno() {
     losses++;
     $("#numberLosses").text(losses);
+    //$("#winLose").text("YOU LOSE!"); SPLASH TEXT for when player loses: need to set time interval
     reset();
   }
   //'hooray' and 'ohno' functions add 1 to 'wins' and 'losses', and appends it to the DOM
