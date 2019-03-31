@@ -35,7 +35,7 @@ $("#numberLosses").text(wins);
 $("#finalTotal").text(total)
 
 //set up function to add ran1-4 to the total
-
+//total is added onto the DOM under #finalTotal
 $('#afghan').on ('click', function(){
     total = total + ran1;
     console.log("the afghan hounds are here: " + ran1)
@@ -56,3 +56,10 @@ $('#crested').on ('click', function(){
     console.log("the cresteds are here: " + ran4)
     $('#finalTotal').text(total);
     })
+
+//set up the conditions for win
+function win(){
+    if (total === entry);
+        $('winLose').text("YOU WIN!");
+        $('numberWins').text(wins++);
+}
