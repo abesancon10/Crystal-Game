@@ -58,12 +58,18 @@ $("#crested").on("click", function() {
 });
 
 //set up the conditions for win
-function win() {
+function yes() {
   let thePrize = "YOU WIN!";
   let theKurgan = "YOU LOSE!";
-  if (total === entry);
-  {
-    $("winLose").text(thePrize);
-    $("numberWins").text(wins++);
+
+  if (total === entry) {
+    win++;
+    $("#winLose").text(thePrize);
+    $("#numberWins").text(wins);
+  }
+  if (total > entry) {
+    losses++;
+    $("#winLose").text(theKurgan);
+    $("#numberLosses").text(losses);
   }
 }
